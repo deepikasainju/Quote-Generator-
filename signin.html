@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="signin_style.css" />
+    <script>
+        function redirectToHomePage() {
+            window.location.href = "quote.html";
+        }
+    </script>
+    
+</head>
+
+<body>
+    <div class="logo">
+        <img src="quoteLogo.png" alt="logo" height="150px" width="auto" onclick="redirectToHomePage()">
+    </div> 
+    <div class="main">
+        <div class="header">
+            <div class="head toggle-border" id="log" onclick="toggleContent('content1')">Login</div>
+            <div class="head" id="reg" onclick="toggleContent('content2')">Register</div>
+        </div>
+        <div class="form_fillup" id="content1" style="display: block;">
+            <form>
+                <input type="text" name="email" id="email" placeholder="Email" />
+                <input type="password" name="password" id="password" placeholder="Password" />
+                <button type="submit" class="Btn">Login</button>
+            </form>
+        </div>
+        <div class="register_fillup" id="content2" style="display:none;">
+            <form>
+                <input type="text" name="email" id="email" placeholder="Email" />
+                <input type="text" name="username" id="username" placeholder="Username" />
+                <input type="password" name="password" id="password" placeholder="Password" />
+                <input type="password" name="con_password" id="conpassword" placeholder="Confirm Password" />
+                <button type="submit" class="Btn">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script src="signin.js"></script>
+</html>
